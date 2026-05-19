@@ -1,60 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Internship Webpage</title>
+    <title>Harish Portfolio</title>
 
     <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
     <style>
 
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html{
-    scroll-behavior: smooth;
-}
+            scroll-behavior: smooth;
+        }
 
         body{
-            background-color: #f4f6f9;
-            font-family: Arial, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e293b,
+        #111827,
+        #0f172a
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientBG 15s ease infinite;
+
+    color: white;
+
+    transition:
+    background 0.5s ease,
+    color 0.5s ease;
+
+}
+    @keyframes gradientBG{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+        section{
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
 
-        .hero-section{
-            padding: 80px 20px;
-            text-align: center;
+        /* Navbar */
+
+        .navbar{
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
         }
 
-        .hero-section h1{
-            font-size: 50px;
-            color: #0d6efd;
+        .navbar-brand{
+            font-size: 28px;
             font-weight: bold;
         }
 
-        .hero-section p{
-            font-size: 20px;
-            color: #555;
-            margin-top: 15px;
-        }
-
-        .card{
-            border: none;
-            border-radius: 15px;
+        .nav-link{
+            color: white !important;
+            margin-left: 15px;
             transition: 0.3s;
         }
 
-        .card:hover{
+        .nav-link:hover{
+            color: #38bdf8 !important;
+        }
+
+        /* Hero Section */
+
+        .hero{
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+    140px 40px 40px 40px;
+
+}
+
+        .hero img{
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.2);
+            box-shadow: 0px 0px 30px rgba(59,130,246,0.6);
+            margin-bottom: 25px;
+            transition: 0.4s;
+        }
+
+        .hero img:hover{
             transform: scale(1.05);
         }
 
-        .footer{
-            background-color: #0d6efd;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 50px;
+        .hero h1{
+            font-size: 70px;
+            font-weight: bold;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        .hero p{
+            font-size: 24px;
+            margin-top: 15px;
+            color: #cbd5e1;
+        }
+
+        .btn-custom{
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .btn-custom:hover{
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Section Titles */
+
+        .section-title{
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        /* Glass Cards */
+
+        .card{
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #38bdf8;
+
+}
+        /* About */
+
+        .about-img{
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(59,130,246,0.4);
+        }
+
+        /* Skills */
+
+        .skill-card{
+            text-align: center;
+            padding: 30px;
+        }
+
+        .skill-card i{
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        /* Contact */
+
+        .contact-info i{
+            color: #38bdf8;
+            margin-right: 10px;
+        }
+
+        .contact-info a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover{
+            color: #38bdf8;
+        }
+
+        /* Footer */
+
+        footer{
+            background: rgba(255,255,255,0.05);
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a{
+            color: white;
+            font-size: 25px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover{
+            color: #38bdf8;
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size: 45px;
+            }
+
+            .hero p{
+                font-size: 18px;
+            }
+
+            .hero img{
+                width: 170px;
+                height: 170px;
+            }
+
+        }
+
+        .nav-link.active{
+    color: #38bdf8 !important;
+}
+
+    #particles-js{
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    background: linear-gradient(to right, #0f172a, #1e293b);
+
+}
+
+    .blob{
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -2;
+    animation: float 10s infinite ease-in-out;
+}
+
+.blob1{
+    width: 300px;
+    height: 300px;
+    background: #3b82f6;
+    top: 10%;
+    left: 10%;
+}
+
+.blob2{
+    width: 250px;
+    height: 250px;
+    background: #8b5cf6;
+    bottom: 10%;
+    right: 10%;
+}
+
+.blob3{
+    width: 200px;
+    height: 200px;
+    background: #06b6d4;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-40px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    opacity: 0.08;
+}
+
+.cursor{
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid #38bdf8;
+
+    border-radius: 50%;
+
+    position: fixed;
+
+    pointer-events: none;
+
+    transform: translate(-50%,-50%);
+
+    z-index: 9999;
+
+}
+
+.social-sidebar{
+
+    position: fixed;
+
+    top: 50%;
+    left: 20px;
+
+    transform: translateY(-50%);
+
+    z-index: 999;
+
+}
+
+.social-sidebar a{
+
+    display: block;
+
+    color: white;
+
+    font-size: 28px;
+
+    margin: 20px 0;
+
+    transition: 0.3s;
+
+}
+
+.social-sidebar a:hover{
+
+    color: #38bdf8;
+    transform: scale(1.2);
+
+}
+
+
+.light-mode{
+
+    background: linear-gradient(
+        -45deg,
+        #f8fafc,
+        #e2e8f0,
+        #ffffff,
+        #f1f5f9
+    ) !important;
+
+    background-size: 400% 400%;
+
+    color: #111827 !important;
+
+}
+
+/* Navbar */
+
+.light-mode .navbar{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    backdrop-filter: blur(12px);
+
+}
+
+/* Navbar Links */
+
+.light-mode .nav-link,
+.light-mode .navbar-brand{
+
+    color: #111827 !important;
+
+}
+
+/* Hero Text */
+
+.light-mode .hero p{
+
+    color: #374151 !important;
+
+}
+
+/* Cards */
+
+.light-mode .card{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    color: #111827 !important;
+
+    border: 1px solid rgba(0,0,0,0.08);
+
+    backdrop-filter: blur(15px);
+
+}
+
+/* Footer */
+
+.light-mode footer{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    color: #111827 !important;
+
+}
+
+/* Footer Icons */
+
+.light-mode footer a{
+
+    color: #111827 !important;
+
+}
+
+/* Sidebar Icons */
+
+.light-mode .social-sidebar a{
+
+    color: #111827 !important;
+
+}
+
+/* Contact Links */
+
+.light-mode .contact-info a{
+
+    color: #111827 !important;
+
+}
+
+/* Theme Button */
+
+.light-mode #theme-toggle{
+
+    border-color: #111827 !important;
+
+    color: #111827 !important;
+
+}
+
+/* Particles Background */
+
+.light-mode #particles-js{
+
+    background:
+    linear-gradient(
+        to right,
+        #f8fafc,
+        #e2e8f0
+    ) !important;
+
+}
+
+/* Matrix Lower Visibility */
+
+.light-mode #matrix{
+
+    opacity: 0.015;
+
+}
+
+/* Blobs Softer */
+
+.light-mode .blob1{
+
+    background: #60a5fa;
+
+}
+
+.light-mode .blob2{
+
+    background: #a78bfa;
+
+}
+
+.light-mode .blob3{
+
+    background: #22d3ee;
+
+}
+
+@media(max-width:768px){
+
+    .social-sidebar{
+
+        left: 10px;
+
+    }
+
+    .social-sidebar a{
+
+        font-size: 22px;
+
+    }
+
+}
+
+*{
+    transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border 0.4s ease;
+}
 
     </style>
 
@@ -62,65 +568,124 @@
 
 <body>
 
+    <div id="particles-js"></div>
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="cursor"></div>
+
+    <div id="loader">
+
+    <h1>Loading Portfolio...</h1>
+
+</div>
+
+    <div class="social-sidebar">
+
+    <a href="https://github.com" target="_blank">
+        <i class="bi bi-github"></i>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank">
+        <i class="bi bi-linkedin"></i>
+    </a>
+
+    <a href="mailto:harish@gmail.com">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+</div>
+
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
-    <div class="container">
-
-        <a class="navbar-brand" href="#">
-            My Webpage
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-    <!-- Hero Section -->
-
-    <section class="hero-section" id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
         <div class="container">
 
-            <h1>Welcome to My Internship Webpage</h1>
+            <a class="navbar-brand" href="#">
+                Harish
+            </a>
+
+            <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+                <button id="theme-toggle"
+class="btn btn-outline-light rounded-pill">
+
+    🌙
+
+</button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <!-- Replace with your image -->
+
+            <img src="myphoto.jpg" alt="Harish Photo">
+
+            <h1>Hello, I'm Harish</h1>
 
             <p>
-                This webpage is created using HTML, CSS and Bootstrap.
-            </p>
+    I am a <span class="typing"></span>
+</p>
 
-            <button class="btn btn-success btn-lg mt-3">
-                Explore More
-            </button>
+            <div class="mt-4">
+
+                <a href="#projects" class="btn btn-custom">
+                    View Projects
+                </a>
+
+                <a href="resume.pdf"
+                class="btn btn-outline-light rounded-pill px-4"
+                download>
+
+                    Download Resume
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -128,33 +693,120 @@
 
     <!-- About Section -->
 
-    <section class="container mt-5" id="about">
+    <section id="about">
 
-        <div class="row">
+        <div class="container">
 
-            <div class="col-md-6">
+            <h2 class="section-title">
+                About Me
+            </h2>
 
-                <img src="myphoto.jpg"
-     class="img-fluid rounded-circle shadow"
-     alt="Harish Photo"
-     width="300">
+            <div class="row align-items-center">
+
+                <div class="col-md-5 mb-4">
+
+                    <img src="myphoto.jpg"
+                    class="img-fluid about-img">
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="card p-5">
+
+                        <p class="fs-5">
+
+                            I am Harish, an MCA student passionate
+                            about Artificial Intelligence, Web
+                            Development and Software Technologies.
+
+                        </p>
+
+                        <p class="fs-5">
+
+                            I enjoy building AI projects, modern
+                            websites and learning new technologies
+                            to improve my technical skills.
+
+                        </p>
+
+                        <p class="fs-5">
+
+                            My goal is to build a strong career
+                            in AI and software development.
+
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="col-md-6 d-flex align-items-center">
+        </div>
 
-                <div>
+    </section>
 
-                    <h2 class="text-primary">About Me</h2>
+    <!-- Projects Section -->
 
-                    <p class="mt-3">
-                        Hi! My name is Harish.
-                        I am learning web development basics as part of my internship training.
-                    </p>
+    <section id="projects">
 
-                    <p>
-                        I am interested in AI, web development and software technologies.
-                    </p>
+        <div class="container">
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Student Performance Predictor</h3>
+
+                        <p class="mt-3">
+
+                            Machine learning project to predict
+                            student performance using AI algorithms.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>AI Chatbot</h3>
+
+                        <p class="mt-3">
+
+                            AI chatbot developed for college support
+                            and communication system.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Symposium Website</h3>
+
+                        <p class="mt-3">
+
+                            Full stack event management website
+                            for symposium registration.
+
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -166,51 +818,61 @@
 
     <!-- Skills Section -->
 
-    <section class="container mt-5" id="skills">
+    <section id="skills">
 
-        <h2 class="text-center text-primary mb-4">
-            My Skills
-        </h2>
+        <div class="container">
 
-        <div class="row">
+            <h2 class="section-title">
+                My Skills
+            </h2>
 
-            <div class="col-md-4 mb-4">
+            <div class="row">
 
-                <div class="card shadow p-4 text-center">
+                <div class="col-md-3 mb-4">
 
-                    <h3>HTML</h3>
+                    <div class="card skill-card">
 
-                    <p>
-                        Used for creating webpage structure.
-                    </p>
+                        <i class="bi bi-filetype-html"></i>
 
-                </div>
+                        <h4>HTML</h4>
 
-            </div>
-
-            <div class="col-md-4 mb-4">
-
-                <div class="card shadow p-4 text-center">
-
-                    <h3>CSS</h3>
-
-                    <p>
-                        Used for styling and designing webpages.
-                    </p>
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="col-md-3 mb-4">
 
-            <div class="col-md-4 mb-4">
+                    <div class="card skill-card">
 
-                <div class="card shadow p-4 text-center">
+                        <i class="bi bi-filetype-css"></i>
 
-                    <h3>Bootstrap</h3>
+                        <h4>CSS</h4>
 
-                    <p>
-                        Helps create responsive and modern webpages quickly.
-                    </p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="card skill-card">
+
+                        <i class="bi bi-bootstrap"></i>
+
+                        <h4>Bootstrap</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mb-4">
+
+                    <div class="card skill-card">
+
+                        <i class="bi bi-code-slash"></i>
+
+                        <h4>Python</h4>
+
+                    </div>
 
                 </div>
 
@@ -222,64 +884,90 @@
 
     <!-- Contact Section -->
 
-    <!-- Contact Section -->
+    <section id="contact">
 
-<section class="container mt-5" id="contact">
+        <div class="container">
 
-    <h2 class="text-center text-primary mb-4">
-        Contact Me
-    </h2>
+            <h2 class="section-title">
+                Contact Me
+            </h2>
 
-    <div class="row justify-content-center">
+            <div class="card p-5 text-center contact-info">
 
-        <div class="col-md-6">
+                <p class="fs-4">
 
-            <div class="card shadow p-4">
+                    <i class="bi bi-telephone-fill"></i>
 
-                <h4 class="mb-3">Get in Touch</h4>
+                    +91 9876543210
 
-                <p>
-                    <strong>Phone:</strong>
-                    +91 9443229919
                 </p>
 
-                <p>
-                    <strong>Email:</strong>
-                    shriharishmuthusivam@gmail.com
+                <p class="fs-4">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    harish@gmail.com
+
                 </p>
 
-                <p>
-                    <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/shri-harish/" target="_blank">
-                        linkedin.com/in/shriharishmuthusivam
+                <p class="fs-4">
+
+                    <i class="bi bi-linkedin"></i>
+
+                    <a href="https://linkedin.com"
+                    target="_blank">
+
+                        LinkedIn Profile
+
                     </a>
+
                 </p>
 
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/shriharishmuthusivam" target="_blank">
-                        github.com/shriharishmuthusivam
+                <p class="fs-4">
+
+                    <i class="bi bi-github"></i>
+
+                    <a href="https://github.com"
+                    target="_blank">
+
+                        GitHub Profile
+
                     </a>
-                </p>
 
-                <button class="btn btn-primary mt-3">
-                    Contact Me
-                </button>
+                </p>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer>
 
-        <p>
-            © 2026 My Internship Webpage | Created by Harish
+        <h5>
+            Created by Harish
+        </h5>
+
+        <div class="mt-3">
+
+            <a href="#">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-envelope-fill"></i>
+            </a>
+
+        </div>
+
+        <p class="mt-3">
+            © 2026 All Rights Reserved
         </p>
 
     </footer>
@@ -288,6 +976,239 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+    var typed = new Typed(".typing", {
+
+        strings: [
+            "AI Developer",
+            "Web Developer",
+            "MCA Student"
+        ],
+
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true
+
+    });
+
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+
+    ScrollReveal().reveal('.card', {
+
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        interval: 200
+
+    });
+
+</script>
+
+<!-- Particles JS -->
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js", {
+
+    "particles": {
+
+        "number": {
+            "value": 80
+        },
+
+        "color": {
+            "value": "#38bdf8"
+        },
+
+        "shape": {
+            "type": "circle"
+        },
+
+        "opacity": {
+            "value": 0.5
+        },
+
+        "size": {
+            "value": 3
+        },
+
+        "line_linked": {
+
+            "enable": true,
+            "distance": 150,
+            "color": "#38bdf8",
+            "opacity": 0.4,
+            "width": 1
+
+        },
+
+        "move": {
+
+            "enable": true,
+            "speed": 3
+
+        }
+
+    },
+
+    "interactivity": {
+
+        "events": {
+
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            }
+
+        }
+
+    },
+
+    "retina_detect": true
+
+});
+
+</script>
+
+<canvas id="matrix"></canvas>
+
+<script>
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "01";
+const fontSize = 14;
+const columns = canvas.width/fontSize;
+
+const drops = [];
+
+for(let x = 0; x < columns; x++)
+    drops[x] = 1;
+
+function draw(){
+
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "#0f0";
+    ctx.font = fontSize + "px monospace";
+
+    for(let i = 0; i < drops.length; i++){
+
+        const text =
+        letters[Math.floor(Math.random()*letters.length)];
+
+        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+        if(drops[i]*fontSize > canvas.height &&
+           Math.random() > 0.975)
+           drops[i] = 0;
+
+        drops[i]++;
+
+    }
+
+}
+
+setInterval(draw,33);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+VanillaTilt.init(document.querySelectorAll(".card"), {
+
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+
+});
+
+</script>
+
+<script>
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+});
+
+</script>
+
+<script>
+
+const toggleBtn =
+document.getElementById("theme-toggle");
+
+/* Detect System Theme */
+
+if(window.matchMedia(
+'(prefers-color-scheme: light)').matches){
+
+    document.body.classList.add("light-mode");
+
+    toggleBtn.innerHTML = "☀️";
+
+}
+
+/* Toggle Theme */
+
+toggleBtn.onclick = ()=>{
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        toggleBtn.innerHTML = "☀️";
+
+    }
+    else{
+
+        toggleBtn.innerHTML = "🌙";
+
+    }
+
+}
+
+</script>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+    document.getElementById("loader")
+    .style.display = "none";
+
+});
+
+</script>
 </body>
 
 </html>
