@@ -20,7 +20,7 @@
 
     <!-- Google Font -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
     rel="stylesheet">
 
     <style>
@@ -37,7 +37,18 @@
 
         body{
 
-    font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
+
+            h1,
+            h2,
+            h3,
+            .navbar-brand{
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            letter-spacing: -1px;
+
+            }
 
     background: linear-gradient(
         -45deg,
@@ -88,8 +99,11 @@
         }
 
         .navbar-brand{
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 34px;
+
+            font-weight: 700;
+
+            letter-spacing: -2px;
         }
 
         .nav-link{
@@ -135,19 +149,38 @@
         }
 
         .hero h1{
-            font-size: 70px;
-            font-weight: bold;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
 
-        .hero p{
-            font-size: 24px;
-            margin-top: 15px;
-            color: #cbd5e1;
-        }
+    font-size: 78px;
 
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -3px;
+
+    background:
+    linear-gradient(
+        to right,
+        #38bdf8,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+    .hero p{
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    color: #cbd5e1;
+
+    letter-spacing: 0.5px;
+
+}
         .btn-custom{
             background: linear-gradient(to right, #3b82f6, #8b5cf6);
             border: none;
@@ -167,11 +200,18 @@
         /* Section Titles */
 
         .section-title{
-            text-align: center;
-            font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 50px;
-        }
+
+    text-align: center;
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    margin-bottom: 50px;
+
+    letter-spacing: -2px;
+
+}
 
         /* Glass Cards */
 
@@ -562,6 +602,25 @@
     border 0.4s ease;
 }
 
+
+
+.light-mode .btn-outline-light{
+
+    color: #111827 !important;
+
+    border-color: #111827 !important;
+
+}
+
+.light-mode .btn-outline-light:hover{
+
+    background: #111827 !important;
+
+    color: white !important;
+
+}
+
+
     </style>
 
 </head>
@@ -605,7 +664,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                SH
+                Harish
             </a>
 
             <button class="navbar-toggler"
@@ -983,9 +1042,10 @@ class="btn btn-outline-light rounded-pill">
     var typed = new Typed(".typing", {
 
         strings: [
-            "AI Developer",
-            "Web Developer",
-            "MCA Student"
+            "M.Sc.AI Student",
+            "AI Chatbot Developer",
+            "Web Developer"
+            
         ],
 
         typeSpeed: 80,
