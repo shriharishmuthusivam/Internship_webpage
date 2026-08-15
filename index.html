@@ -2613,7 +2613,8 @@ let jokeIndex = 0;
 let fillWidth = 0;
 const startTime = Date.now();
 
-const MIN_DISPLAY = 1400;
+const MIN_DISPLAY = 1100;
+const MAX_DISPLAY = 3500;
 
 function popText(){
 
@@ -2686,16 +2687,31 @@ else{
 
 }
 
-window.addEventListener("load",()=>{
+window.addEventListener("DOMContentLoaded",()=>{
 
     loaded = true;
     tryFinish();
 
 });
 
-/* Also check periodically so the min-time case still resolves if 'load' already fired */
+setTimeout(()=>{
 
-setInterval(tryFinish, 200);
+    loaded = true;
+    tryFinish();
+
+}, MAX_DISPLAY);
+
+/* Also check periodically so the min-time case still resolves */
+
+const finishPoller = setInterval(tryFinish, 200);
+
+setInterval(()=>{
+
+    if(finished){
+        clearInterval(finishPoller);
+    }
+
+}, 500);
 
 </script>
 
