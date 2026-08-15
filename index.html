@@ -956,8 +956,67 @@
 
 #loader h1{
 
-    font-size: 28px;
+    font-size: 22px;
     color: #38bdf8;
+    margin-top: 18px;
+
+}
+
+.loader-inner{
+
+    text-align: center;
+
+}
+
+.loader-emoji{
+
+    font-size: 64px;
+    display: block;
+    line-height: 1;
+    animation: emoji-bounce 0.7s ease-in-out infinite;
+
+}
+
+.loader-bar{
+
+    width: 260px;
+    height: 8px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.12);
+    margin: 22px auto 0;
+    overflow: hidden;
+
+}
+
+#loader-fill{
+
+    display: block;
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(to right, #38bdf8, #8b5cf6);
+    transition: width 0.2s ease;
+
+}
+
+#loader-msg.pop{
+
+    animation: loader-pop 0.3s ease-out;
+
+}
+
+@keyframes emoji-bounce{
+
+    0%, 100%{ transform: translateY(0) rotate(0deg); }
+    30%{ transform: translateY(-14px) rotate(-8deg); }
+    60%{ transform: translateY(0) rotate(6deg); }
+
+}
+
+@keyframes loader-pop{
+
+    0%{ transform: scale(0.8); opacity: 0.3; }
+    100%{ transform: scale(1); opacity: 1; }
 
 }
 
@@ -977,6 +1036,12 @@
 .light-mode #loader h1{
 
     color: #111827;
+
+}
+
+.light-mode #loader .loader-bar{
+
+    background: rgba(17,24,39,0.12);
 
 }
 
@@ -1424,7 +1489,15 @@ button:focus-visible,
 
     <div id="loader">
 
-    <h1>Loading Portfolio...</h1>
+    <div class="loader-inner">
+
+        <div class="loader-emoji" id="loader-emoji">🤖</div>
+
+        <h1 id="loader-msg">Loading Portfolio...</h1>
+
+        <div class="loader-bar"><span id="loader-fill"></span></div>
+
+    </div>
 
 </div>
 
@@ -2516,17 +2589,113 @@ toggleBtn.onclick = ()=>{
 
 <script>
 
-window.addEventListener("load",()=>{
+const loader = document.getElementById("loader");
+const loaderEmoji = document.getElementById("loader-emoji");
+const loaderMsg = document.getElementById("loader-msg");
+const loaderFill = document.getElementById("loader-fill");
 
-    const loader = document.getElementById("loader");
+const jokes = [
+    { emoji: "🤖", msg: "Convincing the pixels to behave..." },
+    { emoji: "🐹", msg: "Feeding the hamsters..." },
+    { emoji: "☕", msg: "Brewing coffee for the CSS..." },
+    { emoji: "🧠", msg: "Charging my brain (2%)..." },
+    { emoji: "😅", msg: "Loading personality..." },
+    { emoji: "🐱", msg: "Herding JavaScript cats..." },
+    { emoji: "🚀", msg: "Reticulating splines..." },
+    { emoji: "⏳", msg: "Almost there... not really..." }
+];
 
-    loader.classList.add("fade-out");
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let loaded = false;
+let finished = false;
+let jokeIndex = 0;
+let fillWidth = 0;
+const startTime = Date.now();
+
+const MIN_DISPLAY = 1400;
+
+function popText(){
+
+    loaderMsg.classList.remove("pop");
+    void loaderMsg.offsetWidth;
+    loaderMsg.classList.add("pop");
+
+}
+
+function cycleJoke(){
+
+    const joke = jokes[jokeIndex % jokes.length];
+    jokeIndex++;
+    loaderEmoji.textContent = joke.emoji;
+    loaderMsg.textContent = joke.msg;
+    popText();
+
+}
+
+function waverFill(){
+
+    if(finished) return;
+
+    const dip = 88 + Math.random() * 9;
+    loaderFill.style.width = dip + "%";
+    setTimeout(waverFill, 500);
+
+}
+
+function tryFinish(){
+
+    if(finished) return;
+    if(!loaded) return;
+    if(Date.now() - startTime < MIN_DISPLAY) return;
+
+    finished = true;
+    clearInterval(jokeTimer);
+    clearTimeout(waverTimer);
+
+    loaderFill.style.width = "100%";
 
     setTimeout(()=>{
-        loader.style.display = "none";
-    }, 500);
+
+        loader.classList.add("fade-out");
+
+        setTimeout(()=>{
+            loader.style.display = "none";
+        }, 500);
+
+    }, 300);
+
+}
+
+let jokeTimer = null;
+let waverTimer = null;
+
+if(reduceMotion){
+
+    loaderMsg.textContent = "Loading Portfolio...";
+    loaderFill.style.width = "95%";
+
+}
+else{
+
+    cycleJoke();
+    jokeTimer = setInterval(cycleJoke, 380);
+
+    loaderFill.style.width = "95%";
+    waverTimer = setTimeout(waverFill, 500);
+
+}
+
+window.addEventListener("load",()=>{
+
+    loaded = true;
+    tryFinish();
 
 });
+
+/* Also check periodically so the min-time case still resolves if 'load' already fired */
+
+setInterval(tryFinish, 200);
 
 </script>
 
