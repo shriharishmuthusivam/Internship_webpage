@@ -2393,12 +2393,16 @@ aria-label="Toggle dark or light mode">
 
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
 
+const isSmallScreen = window.innerWidth < 768;
+const particleCount = isSmallScreen ? 30 : 80;
+const lineDistance = isSmallScreen ? 90 : 150;
+
 particlesJS("particles-js", {
 
     "particles": {
 
         "number": {
-            "value": 80
+            "value": particleCount
         },
 
         "color": {
@@ -2420,7 +2424,7 @@ particlesJS("particles-js", {
         "line_linked": {
 
             "enable": true,
-            "distance": 150,
+            "distance": lineDistance,
             "color": "#38bdf8",
             "opacity": 0.4,
             "width": 1
@@ -2470,6 +2474,11 @@ const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isSmallScreen = window.innerWidth < 768;
+
+if(isSmallScreen){
+    canvas.style.display = "none";
+}
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
@@ -2508,7 +2517,7 @@ function draw(){
 
 }
 
-if(!reduceMotion){
+if(!reduceMotion && !isSmallScreen){
 
 setInterval(draw,33);
 
@@ -2607,22 +2616,7 @@ const jokes = [
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let loaded = false;
-let finished = false;
 let jokeIndex = 0;
-let fillWidth = 0;
-const startTime = Date.now();
-
-const MIN_DISPLAY = 1100;
-const MAX_DISPLAY = 3500;
-
-function popText(){
-
-    loaderMsg.classList.remove("pop");
-    void loaderMsg.offsetWidth;
-    loaderMsg.classList.add("pop");
-
-}
 
 function cycleJoke(){
 
@@ -2630,28 +2624,43 @@ function cycleJoke(){
     jokeIndex++;
     loaderEmoji.textContent = joke.emoji;
     loaderMsg.textContent = joke.msg;
-    popText();
+    loaderMsg.classList.remove("pop");
+    void loaderMsg.offsetWidth;
+    loaderMsg.classList.add("pop");
 
 }
+
+let waverTimer = null;
 
 function waverFill(){
 
-    if(finished) return;
-
-    const dip = 88 + Math.random() * 9;
-    loaderFill.style.width = dip + "%";
-    setTimeout(waverFill, 500);
+    loaderFill.style.width = (88 + Math.random() * 9) + "%";
+    waverTimer = setTimeout(waverFill, 500);
 
 }
 
-function tryFinish(){
+if(reduceMotion){
 
-    if(finished) return;
-    if(!loaded) return;
-    if(Date.now() - startTime < MIN_DISPLAY) return;
+    loaderMsg.textContent = "Loading Portfolio...";
+    loaderFill.style.width = "95%";
 
-    finished = true;
-    clearInterval(jokeTimer);
+}
+else{
+
+    cycleJoke();
+    setInterval(cycleJoke, 380);
+
+    loaderFill.style.width = "95%";
+    waverTimer = setTimeout(waverFill, 500);
+
+}
+
+/* Pure timer-based hide - no dependency on DOMContentLoaded, load, images or CDNs */
+
+const HIDE_AFTER = reduceMotion ? 1000 : 1400;
+
+setTimeout(()=>{
+
     clearTimeout(waverTimer);
 
     loaderFill.style.width = "100%";
@@ -2666,52 +2675,7 @@ function tryFinish(){
 
     }, 300);
 
-}
-
-let jokeTimer = null;
-let waverTimer = null;
-
-if(reduceMotion){
-
-    loaderMsg.textContent = "Loading Portfolio...";
-    loaderFill.style.width = "95%";
-
-}
-else{
-
-    cycleJoke();
-    jokeTimer = setInterval(cycleJoke, 380);
-
-    loaderFill.style.width = "95%";
-    waverTimer = setTimeout(waverFill, 500);
-
-}
-
-window.addEventListener("DOMContentLoaded",()=>{
-
-    loaded = true;
-    tryFinish();
-
-});
-
-setTimeout(()=>{
-
-    loaded = true;
-    tryFinish();
-
-}, MAX_DISPLAY);
-
-/* Also check periodically so the min-time case still resolves */
-
-const finishPoller = setInterval(tryFinish, 200);
-
-setInterval(()=>{
-
-    if(finished){
-        clearInterval(finishPoller);
-    }
-
-}, 500);
+}, HIDE_AFTER);
 
 </script>
 
