@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Harish - M.Sc.AI student passionate about artificial intelligence, web development and software technologies.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%2338bdf8' font-family='Arial' font-weight='bold'>H</text></svg>">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="canonical" href="https://shriharishmuthusivam.github.io/Internship_webpage/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Harish Portfolio">
+    <meta property="og:title" content="Harish — M.Sc AI Student & Web Developer">
+    <meta property="og:description" content="Portfolio of Harish - M.Sc.AI student passionate about artificial intelligence, web development and software technologies.">
+    <meta property="og:url" content="https://shriharishmuthusivam.github.io/Internship_webpage/">
+    <meta property="og:image" content="https://shriharishmuthusivam.github.io/Internship_webpage/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Harish - M.Sc AI Student & Web Developer">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Harish — M.Sc AI Student & Web Developer">
+    <meta name="twitter:description" content="Portfolio of Harish - M.Sc.AI student passionate about artificial intelligence, web development and software technologies.">
+    <meta name="twitter:image" content="https://shriharishmuthusivam.github.io/Internship_webpage/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shri Harish V M",
+        "url": "https://shriharishmuthusivam.github.io/Internship_webpage/",
+        "image": "https://shriharishmuthusivam.github.io/Internship_webpage/myphoto.jpg",
+        "jobTitle": "M.Sc Artificial Intelligence Student",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "St. Joseph College of Arts and Science"
+        },
+        "email": "mailto:shriharishmuthusivam@gmail.com",
+        "telephone": "+919443229919",
+        "sameAs": [
+            "https://github.com/shriharishmuthusivam",
+            "https://www.linkedin.com/in/shri-harish/"
+        ],
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Web Development",
+            "Python",
+            "Flask",
+            "React",
+            "REST APIs"
+        ]
+    }
+    </script>
+
+    <title>Harish Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap"
+    rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+
+            font-family: 'Inter', sans-serif;
+
+            h1,
+            h2,
+            h3,
+            .navbar-brand{
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            letter-spacing: -1px;
+
+            }
+
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e293b,
+        #111827,
+        #0f172a
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientBG 15s ease infinite;
+
+    color: white;
+
+    transition:
+    background 0.5s ease,
+    color 0.5s ease;
+
+}
+    @keyframes gradientBG{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+        section{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+        }
+
+        .navbar-brand{
+            font-size: 34px;
+
+            font-weight: 700;
+
+            letter-spacing: -2px;
+        }
+
+        .nav-link{
+            color: white !important;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover{
+            color: #38bdf8 !important;
+        }
+
+        /* Hero Section */
+
+        .hero{
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+    140px 40px 40px 40px;
+
+    }
+
+        .hero img{
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.2);
+            box-shadow: 0px 0px 30px rgba(59,130,246,0.6);
+            margin-bottom: 25px;
+            transition: 0.4s;
+        }
+
+        .hero img:hover{
+            transform: scale(1.05);
+        }
+
+        .hero h1{
+
+    font-size: 78px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -3px;
+
+    background:
+    linear-gradient(
+        to right,
+        #38bdf8,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+    .hero p{
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    color: #cbd5e1;
+
+    letter-spacing: 0.5px;
+
+}
+        .btn-custom{
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .btn-custom:hover{
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Section Titles */
+
+        .section-title{
+
+    text-align: center;
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    margin-bottom: 50px;
+
+    letter-spacing: -2px;
+
+}
+
+        /* Glass Cards */
+
+        .card{
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #38bdf8;
+
+}
+        /* About */
+
+        .about-img{
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(59,130,246,0.4);
+        }
+
+        /* Skills */
+
+        .skill-chip{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #cbd5e1;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            margin: 0 8px 12px 0;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .skill-chip i{
+            color: #38bdf8;
+            font-size: 18px;
+        }
+
+        .skill-chip:hover{
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+            box-shadow: 0 0 14px rgba(56,189,248,0.35);
+        }
+
+        .skill-chip:hover i{
+            color: #38bdf8;
+        }
+
+        /* Project Badges & Buttons */
+
+        .badge-tech{
+            display: inline-block;
+            background: rgba(56,189,248,0.15);
+            border: 1px solid rgba(56,189,248,0.3);
+            color: #38bdf8;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin: 3px 4px 3px 0;
+        }
+
+        .btn-project{
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-project:hover{
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Achievement Cards */
+
+        .achievement-icon{
+            font-size: 45px;
+            color: #38bdf8;
+        }
+
+        /* Muted Text */
+
+        .muted-text{
+            color: #94a3b8;
+        }
+
+        /* Contact */
+
+        .contact-info i{
+            color: #38bdf8;
+            margin-right: 10px;
+        }
+
+        .contact-info a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover{
+            color: #38bdf8;
+        }
+
+        /* Footer */
+
+        footer{
+            background: rgba(255,255,255,0.05);
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a{
+            color: white;
+            font-size: 25px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover{
+            color: #38bdf8;
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size: 45px;
+            }
+
+            .hero p{
+                font-size: 18px;
+            }
+
+            .hero img{
+                width: 170px;
+                height: 170px;
+            }
+
+        }
+
+        .nav-link.active{
+    color: #38bdf8 !important;
+}
+
+    #particles-js{
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    background: linear-gradient(to right, #0f172a, #1e293b);
+
+}
+
+    .blob{
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -2;
+    animation: float 10s infinite ease-in-out;
+}
+
+.blob1{
+    width: 300px;
+    height: 300px;
+    background: #3b82f6;
+    top: 10%;
+    left: 10%;
+}
+
+.blob2{
+    width: 250px;
+    height: 250px;
+    background: #8b5cf6;
+    bottom: 10%;
+    right: 10%;
+}
+
+.blob3{
+    width: 200px;
+    height: 200px;
+    background: #06b6d4;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-40px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    opacity: 0.08;
+}
+
+#loader{
+
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    background: #0f172a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.5s ease;
+
+}
+
+#loader h1{
+
+    font-size: 28px;
+    color: #38bdf8;
+
+}
+
+#loader.fade-out{
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.light-mode #loader{
+
+    background: #f8fafc;
+
+}
+
+.light-mode #loader h1{
+
+    color: #111827;
+
+}
+
+.social-sidebar{
+
+    position: fixed;
+
+    top: 50%;
+    left: 20px;
+
+    transform: translateY(-50%);
+
+    z-index: 999;
+
+}
+
+.social-sidebar a{
+
+    display: block;
+
+    color: white;
+
+    font-size: 28px;
+
+    margin: 20px 0;
+
+    transition: 0.3s;
+
+}
+
+.social-sidebar a:hover{
+
+    color: #38bdf8;
+    transform: scale(1.2);
+
+}
+
+
+.light-mode{
+
+    background: linear-gradient(
+        -45deg,
+        #f8fafc,
+        #e2e8f0,
+        #ffffff,
+        #f1f5f9
+    ) !important;
+
+    background-size: 400% 400%;
+
+    color: #111827 !important;
+
+}
+
+/* Navbar */
+
+.light-mode .navbar{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    backdrop-filter: blur(12px);
+
+}
+
+/* Navbar Links */
+
+.light-mode .nav-link,
+.light-mode .navbar-brand{
+
+    color: #111827 !important;
+
+}
+
+/* Toggler Icon */
+
+.light-mode .navbar-toggler-icon{
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+/* Hero Text */
+
+.light-mode .hero p{
+
+    color: #374151 !important;
+
+}
+
+/* Cards */
+
+.light-mode .card{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    color: #111827 !important;
+
+    border: 1px solid rgba(0,0,0,0.08);
+
+    backdrop-filter: blur(15px);
+
+}
+
+/* Footer */
+
+.light-mode footer{
+
+    background: rgba(255,255,255,0.7) !important;
+
+    color: #111827 !important;
+
+}
+
+/* Footer Icons */
+
+.light-mode footer a{
+
+    color: #111827 !important;
+
+}
+
+/* Sidebar Icons */
+
+.light-mode .social-sidebar a{
+
+    color: #111827 !important;
+
+}
+
+/* Contact Links */
+
+.light-mode .contact-info a{
+
+    color: #111827 !important;
+
+}
+
+/* Theme Button */
+
+.light-mode #theme-toggle{
+
+    border-color: #111827 !important;
+
+    color: #111827 !important;
+
+}
+
+/* Particles Background */
+
+.light-mode #particles-js{
+
+    background:
+    linear-gradient(
+        to right,
+        #f8fafc,
+        #e2e8f0
+    ) !important;
+
+}
+
+/* Matrix Lower Visibility */
+
+.light-mode #matrix{
+
+    opacity: 0.015;
+
+}
+
+/* Blobs Softer */
+
+.light-mode .blob1{
+
+    background: #60a5fa;
+
+}
+
+.light-mode .blob2{
+
+    background: #a78bfa;
+
+}
+
+.light-mode .blob3{
+
+    background: #22d3ee;
+
+}
+
+@media(max-width:768px){
+
+    .social-sidebar{
+
+        left: 10px;
+
+    }
+
+    .social-sidebar a{
+
+        font-size: 22px;
+
+    }
+
+}
+
+*{
+    transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border 0.4s ease;
+}
+
+
+
+.light-mode .btn-outline-light{
+
+    color: #111827 !important;
+
+    border-color: #111827 !important;
+
+}
+
+.light-mode .btn-outline-light:hover{
+
+    background: #111827 !important;
+
+    color: white !important;
+
+}
+
+/* Skill Chips in Light Mode */
+
+.light-mode .skill-chip{
+
+    background: rgba(0,0,0,0.05);
+
+    border: 1px solid rgba(0,0,0,0.1);
+
+    color: #374151;
+
+}
+
+.light-mode .skill-chip:hover{
+
+    border-color: #38bdf8;
+
+    color: #38bdf8;
+
+}
+
+.light-mode .muted-text{
+
+    color: #4b5563;
+
+}
+
+.light-mode .badge-tech{
+
+    background: rgba(37,99,235,0.1);
+
+    border: 1px solid rgba(37,99,235,0.3);
+
+}
+
+/* Skip Link */
+
+.skip-link{
+
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 10001;
+
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 0 0 10px 0;
+    text-decoration: none;
+
+}
+
+.skip-link:focus-visible{
+
+    left: 0;
+
+}
+
+/* Keyboard Focus */
+
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible,
+.btn:focus-visible,
+.navbar-toggler:focus-visible{
+
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
+
+}
+
+/* Back to Top */
+
+.back-to-top{
+
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 998;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: 0.3s;
+
+}
+
+.back-to-top.show{
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+.back-to-top:hover{
+
+    transform: translateY(-3px);
+
+}
+
+@media(max-width:768px){
+
+    .back-to-top{
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce){
+
+    html{
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <div id="particles-js"></div>
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div id="loader">
+
+    <h1>Loading Portfolio...</h1>
+
+</div>
+
+<noscript>
+    <style>
+        #loader{display:none !important;}
+    </style>
+</noscript>
+
+    <div class="social-sidebar">
+
+    <a href="https://github.com/shriharishmuthusivam" target="_blank">
+        <i class="bi bi-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/shri-harish/" target="_blank">
+        <i class="bi bi-linkedin"></i>
+    </a>
+
+    <a href="mailto:shriharishmuthusivam@gmail.com">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+
+</div>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Harish
+            </a>
+
+            <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+                <button id="theme-toggle"
+class="btn btn-outline-light rounded-pill"
+aria-label="Toggle dark or light mode">
+
+    🌙
+
+</button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <!-- Replace with your image -->
+
+            <img src="myphoto.jpg" alt="Shri Harish Photo">
+
+            <h1>Hello, I'm Shri Harish</h1>
+
+            <p>
+    I am a <span class="typing"></span>
+</p>
+
+            <div class="mt-4">
+
+                <a href="#projects" class="btn btn-custom">
+                    View Projects
+                </a>
+
+                <a href="resume.pdf"
+                class="btn btn-outline-light rounded-pill px-4"
+                download>
+
+                    Download Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="row align-items-center">
+
+                <div class="col-md-5 mb-4">
+
+                    <img src="myphoto.jpg"
+                    class="img-fluid about-img"
+                    alt="Shri Harish Photo"
+                    loading="lazy"
+                    decoding="async">
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="card p-5">
+
+                        <p class="fs-5">
+
+                            I am Shri Harish V M, an M.Sc.AI student passionate
+                            about Artificial Intelligence, Web
+                            Development and Software Technologies.
+
+                        </p>
+
+                        <p class="fs-5">
+
+                            I enjoy building AI projects, modern
+                            websites and learning new technologies
+                            to improve my technical skills.
+
+                        </p>
+
+                        <p class="fs-5">
+
+                            My goal is to build a strong career
+                            in AI and software development.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>AI_Mock_Interview</h3>
+
+                        <div class="mt-2">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">Chatbot</span>
+                            <span class="badge-tech">AI</span>
+                        </div>
+
+                        <p class="mt-3">
+
+                            A chatbot-based AI project created
+                            to conduct mock interviews for
+                            students.
+
+                        </p>
+
+                        <div class="mt-auto pt-3">
+                            <a href="https://github.com/shriharishmuthusivam/Bangalore-Pincode-Explorer"
+                            target="_blank" class="btn-project">
+                                View on GitHub
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Pincode Finder</h3>
+
+                        <div class="mt-2">
+                            <span class="badge-tech">React</span>
+                            <span class="badge-tech">Node.js</span>
+                            <span class="badge-tech">Express</span>
+                            <span class="badge-tech">REST API</span>
+                        </div>
+
+                        <p class="mt-3">
+
+                            A full-stack REST API app to search
+                            Bengaluru pincodes and area names
+                            with live autocomplete suggestions.
+
+                        </p>
+
+                        <div class="mt-auto pt-3">
+                            <a href="https://github.com/shriharishmuthusivam/Bangalore-Pincode-Explorer"
+                            target="_blank" class="btn-project">
+                                View on GitHub
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Symposium Website</h3>
+
+                        <div class="mt-2">
+                            <span class="badge-tech">Flask</span>
+                            <span class="badge-tech">SQLite</span>
+                            <span class="badge-tech">Jinja2</span>
+                            <span class="badge-tech">Bootstrap</span>
+                        </div>
+
+                        <p class="mt-3">
+
+                            A full-stack Flask event management
+                            system with student authentication,
+                            team registration, admin dashboard
+                            and CSV export.
+
+                        </p>
+
+                        <div class="mt-auto pt-3">
+                            <a href="https://github.com/shriharishmuthusivam/SymposiumHub"
+                            target="_blank" class="btn-project">
+                                View on GitHub
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <a href="https://github.com/shriharishmuthusivam"
+                target="_blank" class="btn btn-outline-light rounded-pill px-4">
+                    More on GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Skills
+            </h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="card p-5">
+
+                        <h4 class="mb-1">Languages</h4>
+
+                        <div class="mt-3">
+                            <span class="skill-chip"><i class="bi bi-filetype-py"></i>Python</span>
+                            <span class="skill-chip"><i class="bi bi-filetype-js"></i>JavaScript</span>
+                            <span class="skill-chip"><i class="bi bi-filetype-html"></i>HTML</span>
+                            <span class="skill-chip"><i class="bi bi-filetype-css"></i>CSS</span>
+                        </div>
+
+                        <h4 class="mb-1 mt-5">Frameworks</h4>
+
+                        <div class="mt-3">
+                            <span class="skill-chip"><i class="bi bi-bootstrap"></i>Bootstrap</span>
+                            <span class="skill-chip"><i class="bi bi-flask"></i>Flask</span>
+                            <span class="skill-chip"><i class="bi bi-atom"></i>React</span>
+                            <span class="skill-chip"><i class="bi bi-diagram-3"></i>Node.js / Express</span>
+                        </div>
+
+                        <h4 class="mb-1 mt-5">Databases &amp; Tools</h4>
+
+                        <div class="mt-3">
+                            <span class="skill-chip"><i class="bi bi-database"></i>SQLite</span>
+                            <span class="skill-chip"><i class="bi bi-git"></i>Git &amp; GitHub</span>
+                            <span class="skill-chip"><i class="bi bi-hdd-network"></i>REST APIs</span>
+                            <span class="skill-chip"><i class="bi bi-cpu"></i>AI &amp; Machine Learning</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Experience & Education Section -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Experience &amp; Education
+            </h2>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Experience</h3>
+
+                        <div class="mt-3">
+                            <h5>Python Development Intern</h5>
+                            <p class="muted-text mb-1">Nitroware Technology, Coimbatore · May 2024 – Jun 2024</p>
+                            <ul class="mt-2 mb-0">
+                                <li>Strengthened Python programming and debugging skills.</li>
+                                <li>Gained hands-on exposure to real-time project implementation.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5>Artificial Intelligence Intern</h5>
+                            <p class="muted-text mb-1">Skillvertex (Virtual) · Sep 2023 – Oct 2023</p>
+                            <ul class="mt-2 mb-0">
+                                <li>Learned core AI and Machine Learning concepts with practical applications.</li>
+                                <li>Completed an assigned AI-based project independently.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mb-4">
+
+                    <div class="card p-4 h-100">
+
+                        <h3>Education</h3>
+
+                        <div class="mt-3">
+                            <h5>M.Sc – Artificial Intelligence</h5>
+                            <p class="muted-text mb-1">St. Joseph College of Arts and Science · 2025 – 2027</p>
+                            <p class="mb-0"><span class="badge-tech">Ongoing</span></p>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5>B.Sc – Computer Science</h5>
+                            <p class="muted-text mb-1">St. Joseph College of Arts and Science · 2022 – 2025</p>
+                            <p class="mb-0"><span class="badge-tech">Completed</span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Achievements Section -->
+
+    <section id="achievements">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Achievements
+            </h2>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-3 mb-4">
+
+                    <div class="card p-4 h-100 text-center">
+
+                        <i class="bi bi-patch-check achievement-icon"></i>
+
+                        <h4 class="mt-3">NIELIT AI Certification</h4>
+
+                        <p class="muted-text mb-0 mt-2">
+                            Artificial Intelligence in Tamil · Mar 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+
+                    <div class="card p-4 h-100 text-center">
+
+                        <i class="bi bi-award achievement-icon"></i>
+
+                        <h4 class="mt-3">Skillvertex AI Certification</h4>
+
+                        <p class="muted-text mb-0 mt-2">
+                            Artificial Intelligence · 2023
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+
+                    <div class="card p-4 h-100 text-center">
+
+                        <i class="bi bi-person-check achievement-icon"></i>
+
+                        <h4 class="mt-3">Class Representative</h4>
+
+                        <p class="muted-text mb-0 mt-2">
+                            UG final year &amp; PG first year
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+
+                    <div class="card p-4 h-100 text-center">
+
+                        <i class="bi bi-trophy achievement-icon"></i>
+
+                        <h4 class="mt-3">District-Level Chess</h4>
+
+                        <p class="muted-text mb-0 mt-2">
+                            Competed with certificates &amp; medals
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact Me
+            </h2>
+
+            <div class="card p-5 text-center contact-info">
+
+                <p class="fs-4">
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    <a href="tel:+919443229919">+91 9443229919</a>
+
+                </p>
+
+                <p class="fs-4">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    <a href="mailto:shriharishmuthusivam@gmail.com">shriharishmuthusivam@gmail.com</a>
+
+                </p>
+
+                <p class="fs-4">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    <a href="https://wa.me/919443229919"
+                    target="_blank">
+
+                        WhatsApp
+
+                    </a>
+
+                </p>
+
+                <p class="fs-4">
+
+                    <i class="bi bi-linkedin"></i>
+
+                    <a href="https://www.linkedin.com/in/shri-harish/"
+                    target="_blank">
+
+                        LinkedIn Profile
+
+                    </a>
+
+                </p>
+
+                <p class="fs-4">
+
+                    <i class="bi bi-github"></i>
+
+                    <a href="https://github.com/shriharishmuthusivam"
+                    target="_blank">
+
+                        GitHub Profile
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h5>
+            Created by Harish
+        </h5>
+
+        <div class="mt-3">
+
+            <a href="https://github.com/shriharishmuthusivam" target="_blank">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/shri-harish/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="mailto:shriharishmuthusivam@gmail.com">
+                <i class="bi bi-envelope-fill"></i>
+            </a>
+
+        </div>
+
+        <p class="mt-3">
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+
+        var typed = new Typed(".typing", {
+
+            strings: [
+                "M.Sc.AI Student",
+                "AI Chatbot Developer",
+                "Web Developer"
+                
+            ],
+
+            typeSpeed: 80,
+            backSpeed: 50,
+            loop: true
+
+        });
+
+    }
+
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+
+        ScrollReveal().reveal('.card', {
+
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            origin: 'bottom',
+            interval: 200
+
+        });
+
+    }
+
+</script>
+
+<!-- Particles JS -->
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+
+particlesJS("particles-js", {
+
+    "particles": {
+
+        "number": {
+            "value": 80
+        },
+
+        "color": {
+            "value": "#38bdf8"
+        },
+
+        "shape": {
+            "type": "circle"
+        },
+
+        "opacity": {
+            "value": 0.5
+        },
+
+        "size": {
+            "value": 3
+        },
+
+        "line_linked": {
+
+            "enable": true,
+            "distance": 150,
+            "color": "#38bdf8",
+            "opacity": 0.4,
+            "width": 1
+
+        },
+
+        "move": {
+
+            "enable": true,
+            "speed": 3
+
+        }
+
+    },
+
+    "interactivity": {
+
+        "events": {
+
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            }
+
+        }
+
+    },
+
+    "retina_detect": true
+
+});
+
+}
+
+</script>
+
+<canvas id="matrix"></canvas>
+
+<script>
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "01";
+const fontSize = 14;
+let columns = canvas.width/fontSize;
+
+const drops = [];
+
+for(let x = 0; x < columns; x++)
+    drops[x] = 1;
+
+function draw(){
+
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "#0f0";
+    ctx.font = fontSize + "px monospace";
+
+    for(let i = 0; i < drops.length; i++){
+
+        const text =
+        letters[Math.floor(Math.random()*letters.length)];
+
+        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+        if(drops[i]*fontSize > canvas.height &&
+           Math.random() > 0.975)
+           drops[i] = 0;
+
+        drops[i]++;
+
+    }
+
+}
+
+if(!reduceMotion){
+
+setInterval(draw,33);
+
+window.addEventListener("resize",()=>{
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    columns = Math.floor(canvas.width/fontSize);
+
+    drops.length = 0;
+
+    for(let x = 0; x < columns; x++)
+        drops[x] = 1;
+
+});
+
+}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+
+VanillaTilt.init(document.querySelectorAll(".card"), {
+
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+
+});
+
+}
+
+</script>
+
+<script>
+
+const toggleBtn =
+document.getElementById("theme-toggle");
+
+/* Restore Saved Theme */
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+
+    document.body.classList.add("light-mode");
+
+    toggleBtn.innerHTML = "☀️";
+
+}
+else if(savedTheme === "dark"){
+
+    document.body.classList.remove("light-mode");
+
+    toggleBtn.innerHTML = "🌙";
+
+}
+else if(window.matchMedia(
+'(prefers-color-scheme: light)').matches){
+
+    document.body.classList.add("light-mode");
+
+    toggleBtn.innerHTML = "☀️";
+
+}
+
+/* Toggle Theme */
+
+toggleBtn.onclick = ()=>{
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        toggleBtn.innerHTML = "☀️";
+
+        localStorage.setItem("theme", "light");
+
+    }
+    else{
+
+        toggleBtn.innerHTML = "🌙";
+
+        localStorage.setItem("theme", "dark");
+
+    }
+
+}
+
+</script>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("fade-out");
+
+    setTimeout(()=>{
+        loader.style.display = "none";
+    }, 500);
+
+});
+
+</script>
+
+<script>
+
+const navCollapse = document.getElementById("menu");
+
+document.querySelectorAll(".navbar-nav .nav-link").forEach(link=>{
+    link.addEventListener("click",()=>{
+        const collapse = bootstrap.Collapse.getInstance(navCollapse);
+        if(collapse && navCollapse.classList.contains("show")){
+            collapse.hide();
+        }
+    });
+});
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+window.addEventListener("scroll",()=>{
+
+    let current = "home";
+
+    sections.forEach(section=>{
+        if(window.scrollY >= section.offsetTop - 200){
+            current = section.id;
+        }
+    });
+
+    navLinks.forEach(link=>{
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+        );
+    });
+
+});
+
+/* Back to Top */
+
+const backTop = document.getElementById("back-to-top");
+
+window.addEventListener("scroll",()=>{
+    backTop.classList.toggle("show", window.scrollY > 300);
+});
+
+backTop.addEventListener("click",()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+</script>
+
+</body>
+
+</html>

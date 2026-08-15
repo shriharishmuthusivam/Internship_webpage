@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shriharishmuthusivam.github.io/Internship_webpage/sitemap.xml
