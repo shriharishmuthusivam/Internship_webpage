@@ -79,7 +79,7 @@
 
     <!-- Google Font -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
     <style>
@@ -102,7 +102,8 @@
             h2,
             h3,
             h4,
-            .navbar-brand{
+            .navbar-brand,
+            .nav-link{
 
             font-family: 'Orbitron', sans-serif;
 
@@ -169,11 +170,31 @@
         .nav-link{
             color: white !important;
             margin-left: 15px;
+            font-size: 14px;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         .nav-link:hover{
             color: #38bdf8 !important;
+        }
+
+        #theme-toggle{
+            margin-left: 15px;
+        }
+
+        @media(max-width:991.98px){
+            .navbar .container{
+                flex-wrap: nowrap;
+            }
+            .navbar-toggler{
+                order: 3;
+                margin-left: 10px;
+            }
+            #theme-toggle{
+                order: 2;
+                margin-left: auto;
+            }
         }
 
         /* Hero Section */
@@ -1308,6 +1329,8 @@ button:focus-visible,
                     </li>
 
                 </ul>
+
+            </div>
                 <button id="theme-toggle"
 class="btn btn-outline-light rounded-pill"
 aria-label="Toggle dark or light mode">
@@ -1315,8 +1338,6 @@ aria-label="Toggle dark or light mode">
     🌙
 
 </button>
-
-            </div>
 
         </div>
 
